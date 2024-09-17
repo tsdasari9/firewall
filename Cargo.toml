@@ -1,0 +1,36 @@
+
+[package]
+
+name = "firewall"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+
+pnet = "0.33.0"
+pnet_packet = "0.33.0"
+log = "0.4.17"
+env_logger = "0.10.0"
+chrono = "0.4.23"
+
+
+[dependencies.tokio]
+
+version = "1.28.0"
+features = ["full"]
+
+
+[build-dependencies]
+
+pnet_packet = "0.33.0"
+
+
+[profile.dev]
+
+opt-level = 0
+
+
+[profile.release]
+
+opt-level = 3
